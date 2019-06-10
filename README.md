@@ -38,13 +38,6 @@
 
 * 코드 삽입
 ~~~python
-items = list(range(1,11))
-
-for i in items:
-    print(i)
-~~~
-* 코드 삽입
-~~~python
 import pandas as pd
 import numpy as np
 
