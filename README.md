@@ -13,7 +13,9 @@
 차입,대출이 가능한 무위험자산은 제외하고 위험자산만 고려할 예정입니다.
 
 ## 🛠 프로젝트 개요
-![기말보고서 흐름도파일](https://github.com/s745812369s/python_project-2019-01/blob/master/%EA%B8%B0%EB%A7%90%EB%B3%B4%EA%B3%A0%EC%84%9C%20%ED%9D%90%EB%A6%84%EB%8F%84%ED%8C%8C%EC%9D%BC.jpg)
+![기말보고서 흐름도파일](https://github.com/09superm/python_project_2019/blob/master/흐름도1.jpeg)
+![기말보고서 흐름도파일](https://github.com/09superm/python_project_2019/blob/master/흐름도2.jpeg)
+
 
 ## 📊 사용한 공공데이터
 * fnguide 수정주가 수익률 데이터
