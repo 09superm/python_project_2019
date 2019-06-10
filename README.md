@@ -12,10 +12,18 @@
 개인이 선택한 포트폴리오에 따라 가장 위험이 최소가 되는 투자비중을 구하고, 그 비중에 따른 수익과 위험을 구할 것입니다.
 차입,대출이 가능한 무위험자산은 제외하고 위험자산만 고려할 예정입니다.
 
+## 🛠 프로젝트 개요
+![기말보고서 흐름도파일](https://github.com/s745812369s/python_project-2019-01/blob/master/%EA%B8%B0%EB%A7%90%EB%B3%B4%EA%B3%A0%EC%84%9C%20%ED%9D%90%EB%A6%84%EB%8F%84%ED%8C%8C%EC%9D%BC.jpg)
+
 ## 📊 사용한 공공데이터
 * fnguide 수정주가 수익률 데이터
 
     [데이터보기](https://github.com/09superm/python_project_2019/blob/master/returndata.csv)
+    (선택 가능한 자산은 KOSPI 200 중 2000 년 이후 모든 가격정보를 갖는 자산으로 한정, 20개 주식종목)
+
+
+
+
 
 ## 소스
 * [링크로 소스 내용 보기](https://github.com/cybermin/python2019/blob/master/tes.py) 
