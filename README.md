@@ -15,7 +15,7 @@
 ## 📊 사용한 공공데이터
 * fnguide 수정주가 수익률 데이터
 
-[데이터보기](https://github.com/09superm/python_project_2019/blob/master/returndata.csv)
+    [데이터보기](https://github.com/09superm/python_project_2019/blob/master/returndata.csv)
 
 ## 소스
 * [링크로 소스 내용 보기](https://github.com/cybermin/python2019/blob/master/tes.py) 
