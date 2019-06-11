@@ -2,7 +2,7 @@ import numpy as np
 from scipy.optimize import minimize
 import math
 
-# GMVP
+# GMVP 최소분산포트폴리오
 
 def MinVol_objective(x): # 목적함수
     variance = x.T @ covmat @ x # 포트폴리오의 위험 = 비중 * 공분산 * 비중
@@ -28,14 +28,10 @@ def MinVol(covmat, lb, ub): # 최적화 구하는 함수 인풋 값은 covmat(�
     return (result.x)
 
 gmvpwgt = MinVol(covmat,0,1)
-# print("gmvp_wgt:",gmvpwgt)
 
 gmvpret = "%0.6f" % rt_ret.dot(gmvpwgt)
 gmvpvar = gmvpwgt.dot(gmvpwgt.dot(covmat))
 gmvpstd = "%0.6f" % math.sqrt(gmvpvar)
-
-# print("gmvp_ret:",gmvpret)
-# print("gmvp_std:",gmvpstd)
 
 print("\n===== 결과 =====\n")
 print(str(your_input) + "로 포트폴리오를 구성했을 때,\n",
