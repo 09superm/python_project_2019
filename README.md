@@ -27,7 +27,7 @@
 
 
 ## 🛠 소스
-1. 데이터 파일 불러오기 ~ 최적화함수 인풋 요소 만들기
+1. 데이터 파일 불러오기 ~ 최소분산포트폴리오 input 요소 만들기
 * [링크로 소스 내용 보기](https://github.com/09superm/python_project_2019/blob/master/1.py) 
 
 2. 최소분산포트폴리오 구하기 
@@ -36,7 +36,7 @@
 3. 그래프 그리기 
 * [링크로 소스 내용 보기](https://github.com/09superm/python_project_2019/blob/master/3.py) 
 
-* 코드 삽입
+* 소스 1 코드 삽입
 ~~~python
 import pandas as pd
 import numpy as np
@@ -73,13 +73,10 @@ for s in your_input :
 
 # 입력값에 따른 수익률 정보 저장하기, return_data 입력값 열이름에 따라 수익률 정보 저장
 return_data = returnD.loc[5:237,your_data]
-# print(return_data)
 
 # pandas 데이터를 numpy 데이터로 변환하기 return_data_np
 return_data_np = return_data.values
 return_data_np = return_data_np.astype("float64") # 데이터 타입은 실수로 함
-# print(return_data_np)
-# print("-----------------------")
 
 # 각 종목의 평균, 분산, 표준편차 ret, var, std
 rt_ret = return_data_np.sum(axis=0)/ 233
@@ -88,6 +85,13 @@ rt_std = return_data_np.std(axis=0)
 
 # 각 종목의 공분산 covmat
 covmat = np.cov(return_data_np, rowvar=0)
+~~~
+
+* 소스 2 코드 삽입
+~~~python
+import numpy as np
+from scipy.optimize import minimize
+import math
 
 # GMVP
 
@@ -115,19 +119,22 @@ def MinVol(covmat, lb, ub): # 최적화 구하는 함수 인풋 값은 covmat(�
     return (result.x)
 
 gmvpwgt = MinVol(covmat,0,1)
-# print("gmvp_wgt:",gmvpwgt)
 
 gmvpret = "%0.6f" % rt_ret.dot(gmvpwgt)
 gmvpvar = gmvpwgt.dot(gmvpwgt.dot(covmat))
 gmvpstd = "%0.6f" % math.sqrt(gmvpvar)
 
-# print("gmvp_ret:",gmvpret)
-# print("gmvp_std:",gmvpstd)
-
 print("\n===== 결과 =====\n")
 print(str(your_input) + "로 포트폴리오를 구성했을 때,\n",
       your_input[0], gmvpwgt[0:1], your_input[1], gmvpwgt[1:2], your_input[2], gmvpwgt[2:3], your_input[3], gmvpwgt[3:4],your_input[4],str(gmvpwgt[4:5])
       + "만큼 투자하면 위험을 최소화할 수 있습니다.\n", "이 때 발생되는 위험은",gmvpstd, "수익률의 평균은", str(gmvpret), "입니다.")
+~~~
+
+* 소스 3 코드 삽입
+~~~python
+import matplotlib.pyplot as plt
+from matplotlib import font_manager, rc
+from matplotlib import style
 
 # 그래프 만들기
 font_name = font_manager.FontProperties(fname="/System/Library/Fonts/AppleSDGothicNeo.ttc").get_name()
