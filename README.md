@@ -13,6 +13,10 @@
 차입,대출이 가능한 무위험자산은 제외하고 위험자산만 고려할 예정입니다.
 
 ## 📊 프로젝트 개요
+
+![기말보고서 흐름도파일](https://github.com/09superm/python_project_2019/blob/master/개요.JPG)
+
+
 ![기말보고서 흐름도파일](https://github.com/09superm/python_project_2019/blob/master/흐름도1.jpeg)
 ![기말보고서 흐름도파일](https://github.com/09superm/python_project_2019/blob/master/흐름도2.jpeg)
 
