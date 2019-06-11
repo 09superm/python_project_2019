@@ -33,13 +33,10 @@ for s in your_input :
 
 # 입력값에 따른 수익률 정보 저장하기, return_data 입력값 열이름에 따라 수익률 정보 저장
 return_data = returnD.loc[5:237,your_data]
-# print(return_data)
 
 # pandas 데이터를 numpy 데이터로 변환하기 return_data_np
 return_data_np = return_data.values
 return_data_np = return_data_np.astype("float64") # 데이터 타입은 실수로 함
-# print(return_data_np)
-# print("-----------------------")
 
 # 각 종목의 평균, 분산, 표준편차 ret, var, std
 rt_ret = return_data_np.sum(axis=0)/ 233
